@@ -1,7 +1,7 @@
 # Dmitry Kutuzov
---------------------------------------------------------------------------------------------------
-| [archiesw](https://github.com/archiesw) | [archie-woc@ya.ru](mailto:archie-woc@ya.ru) | [+7.937.955.53.78](tel:+79379555378) | [@archiensky](https://archiensky.t.me) |
---------------------------------------------------------------------------------------------------
+
+| [gh: archiesw](https://github.com/archiesw) | [archie-woc@ya.ru](mailto:archie-woc@ya.ru) | [+79379555378](tel:+79379555378) | [tg: @archiensky](https://archiensky.t.me) |
+|----------|------------------|------------------|-------------|
 
 ## Summary
 

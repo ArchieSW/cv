@@ -13,12 +13,14 @@ Nizhniy Novgorod).
 
 ## Skills
 
-  -------------- ----------------------------------------------------------
-  Good at:       Java, TS
-  Tried:         C++, Python, JS, C, react.js
-  Worked with:   JUnit, Gradle, Reactor Core, GitHub Workflow, Git, LaTeX
-  Languages:     Russian, English (intermediate)
-  -------------- ----------------------------------------------------------
+  |Good at:       |Java, TS                                                   |
+  |-------------- | ----------------------------------------------------------|
+  |Tried:         |C++, Python, JS, C, react.js                               |
+  |-------------- | ----------------------------------------------------------|
+  |Worked with:   |JUnit, Gradle, Reactor Core, GitHub Workflow, Git, LaTeX   |
+  |-------------- | ----------------------------------------------------------|
+  |Languages:     |Russian, English (intermediate)                            |
+  |-------------- | ----------------------------------------------------------|
 
 ## Education
 

@@ -24,3 +24,7 @@ Nizhniy Novgorod).
 **Software Engineering** & Sep 2021 - Jun 2025
 
 **Backend Academy** & Sep 2022 - present
+
+## CV
+Latest version of my CV is at this link
+https://archiesw.github.io/cv/cv.pdf

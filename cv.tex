@@ -1,190 +1,110 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%    The MIT License (MIT)
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
 %
-%    Copyright (c) 2021 Jitin Nair
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
 %
-%    Permission is hereby granted, free of charge, to any person obtaining a copy
-%    of this software and associated documentation files (the "Software"), to deal
-%    in the Software without restriction, including without limitation the rights
-%    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%    copies of the Software, and to permit persons to whom the Software is
-%    furnished to do so, subject to the following conditions:
-%    
-%    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%    THE SOFTWARE.
-%    
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
 %
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-%----------------------------------------------------------------------------------------
-%    DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
-%----------------------------------------------------------------------------------------
-%    FONT
-%----------------------------------------------------------------------------------------
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{3E6D9C}
 
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
 
-%----------------------------------------------------------------------------------------
-%    PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip}     
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
 
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-%tabularx environment
-\usepackage{tabularx}
 
-%for lists within experience section
-\usepackage{enumitem}
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Кутузов}{Дмитрий}
+\position{Java разработчик{\enskip\cdotp\enskip}backend}
+\address{г. Нижний Новгород, ул. Кузнечихинская, д. 100 \\ переезд рассматриваю}
 
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\mobile{+7(937)955-53-78}
+\email{archie-woc@ya.ru}
+\dateofbirth{9.10.2003}
+% \homepage{www.posquit0.com}
+\github{ArchieSW}
+% \linkedin{posquit0}
+\gitlab{@KutuzovDmitry - ID 12543257}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+\extrainfo{Гражданство: Россия}
 
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
+% \quote{``Be the change that you want to see in the world."}
 
-%custom \section
-\usepackage{titlesec}                
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
-%for social icons
-\usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
-%----------------------------------------------------------------------------------------
-%    BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
-\pagestyle{empty} 
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
 
-%----------------------------------------------------------------------------------------
-%    TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Dmitry Kutuzov} \\[7.5pt]
-\href{https://github.com/archiesw}{\raisebox{-0.05\height}\faGithub\ archiesw} \ $|$ \ 
-% \href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:archie-woc@ya.ru}{\raisebox{-0.05\height}\faEnvelope \ archie-woc@ya.ru} \ $|$ \ 
-\href{tel:+79379555378}{\raisebox{-0.05\height}\faMobile \ +7.937.955.53.78} \ $|$ \ 
-\href{https://archiensky.t.me}{\raisebox{-0.05\height}\faPaperPlane \ @archiensky} \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
-\section{Summary}
-Beginner Java developer with non-commercial experience in team development.  Basic knowledge in MVC/REST applications. Also ability to work with Swagger, JUnit, CI/CD pipeline. I know SQL and I know how to work with DBMS. Currently looking for a job/internship (remote/office in Nizhniy Novgorod).
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Кутузов Дмитрий~~~·~~~Резюме}
+  {\thepage}
 
 
-%----------------------------------------------------------------------------------------
-%    SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Good at: &  \normalsize{Java, TS}\\
-Tried:  &  \normalsize{C++, Python, JS, C, react.js}\\  
-Worked with:  &  \normalsize{JUnit, Gradle, Reactor Core, GitHub Workflow, Git, LaTeX}\\  
-Languages:  &  \normalsize{Russian, English (intermediate)}\\  
-\end{tabularx}
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/position.tex}
+\input{resume/experience.tex}
+\input{resume/education.tex}
+\input{resume/summary.tex}
+\input{resume/honors.tex}
+% \input{resume/certificates.tex}
+% \input{resume/presentation.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
+% \input{resume/extracurricular.tex}
 
-%Experience
-\section{Education}
 
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Software Engineering} & \hfill Sep 2021 - Jun 2025 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-Higher School of Economics Nizhniy Novgorod\\
-Completed courses:
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-    \item[--] Algorithms and Data Structures (excellent)
-    \item[--] Computer System Architecture (excellent)
-    \item[--] C Programming (excellent)
-    \item[--] Version control system (excellent)
-    \item[--] Linear Algebra (excellent)
-    \item[--] Discrete Mathematics (excellent)
-    \item[--] Calculus (good)
-\end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Backend Academy} & \hfill Sep 2022 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    Tinkoff Education
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] Learning to write clean code .
-        \item[--] Became familiar with SOLID principles and learned how to apply them in practice.
-        \item[--] Learned best practices for functional and object-oriented programming in Java.
-        \item[--] Learned to use reactive java in web services.
-        \item[--] Learned to write clean unit tests.
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
-\vfill
-\center{\footnotesize Last updated: \today}
-
+%-------------------------------------------------------------------------------
 \end{document}

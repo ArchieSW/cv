@@ -1,43 +1,74 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Проектная деятельность}
+
+\cvsection{Опыт работы}
+
+\begin{cventries}
+\cventry
+  {Java Backend Developer} % Job title
+  {ПАО Сбербанк - команда СберОпрос} % Organization
+  {Россия} % Location
+  {Сентябрь 2023 — н.в. (2 Года)} % Date(s)
+  {
+    \begin{cvitems} % Description(s) of tasks/responsibilities
+      \item {Разрабатываю бэкенд продукта для проведений качественных исследований через анкетирования - SberOpros, который собрал за 4 года 6500 анкет, 
+      18 млн ответов и зарегистрировал 80 млн респондентов. Продукт позволяет внутренним сотрудникам Сбербанка создавать и проводить опросы на юридических лицах и сотрудниках 
+      компании в формате ссылок, email-писем, а также виджета, встраиваемого в другие продукты}
+      \item {Разработал интеграцию с сервисом для подбора респондентов, что повысило конверсию опросов.}
+      \item {Реализовал сбор обратной связи от пользователей конструктора через виджет, что позволило улучшить качество обслуживания.}
+      \item {Реализовал сбор пользовательских метрик (DAU/WAU/MAU, Cycle Time, LTR Виджета) и выгрузку отчётов, что улучшило пользовательский опыт и поддержку бизнеса.}
+      \item {Провел онбординг 4 новых сотрудников и взял на себя обязанности по предрелизным делам на тестовых стендах.}
+      \item {\textbf{Стек}: Java 17, Spring Boot 2.7, DDD, Clean Architecture, PostgreSQL, Spring Data JPA, Hibernate, REST, OpenAPI, Kafka, Keycloak, Kubernetes, Istio, Prometheus.}
+    \end{cvitems}
+  }
+\end{cventries}
+
+
 
 
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
+\cvsection{Проектная деятельность}
+
 \begin{cventries}
 
 %---------------------------------------------------------
-  \cventry
-    {Java backend. Spring Boot + Spring Data JPA} % Job title
-    {Kanban} % Organization
-    {} % Location
-    {Декабрь. 2022} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {\href{https://gitlab.com/KutuzovDmitry/kanban}{\underline{Ссылка на репозиторий}}}
-        \item {Проект под руководством ментора с Академии Бэкенда Тинькофф}
-        \item {Написание чистого Java кода с использованием Spring Boot}
-        \item {Написание юнит тестов с помощью JUnit 5}
-        \item {Написание интеграционных тестов с использованием Testcontainers и Spring Boot Test}
-        \item {Документирование кода и API с помощью OpenAPI}
-      \end{cvitems}
-    }
+\cventry
+  {}
+  {Vogorode}
+  {\href{https://github.com/ArchieSW/vogorode}{\underline{Github}}, 2023}
+  {}
+  {
+    \vspace{-5mm}
+    \begin{cvitems}
+      \item {Разработал систему управления заявками на услуги мастеров и садоводческих работ в микросервисной архитектуре.}
+      \item {Организовал взаимодействие между сервисами, реализовал балансировку и отказоустойчивость.}
+      \item {Интегрировал Kafka для асинхронного обмена сообщениями между сервисами.}
+      \item {Настроил контейнеризацию и оркестрацию приложения.}
+      \item {Внедрил мониторинг для повышения надежности и observability системы.}
+      \item {Оптимизировал работу с базой данных, внедрив пагинацию, индексы и кастомные запросы через.}
+      \item {\textbf{Стек}: Java 17, Spring Boot 2.7, PostgreSQL, Spring Data JPA, Hibernate, REST, gRPC, Prometheus, Grafana, Docker, Docker Compose}
+    \end{cvitems}
+  }
+
+ \vspace{1em}
 
 %---------------------------------------------------------
   \cventry
-    {Java backend. Microservices, Kafka, Spring Boot} % Job title
-    {Распределенная обработка финансовых данных} % Organization
-    {} % Location
-    {В процессе.} % Date(s)
+    {}
+    {Распределенная обработка финансовых данных}
+    {\href{https://github.com/HSECourseWork2022}{\underline{Github}}, 2023}
+    {}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item{\href{https://github.com/HSECourseWork2022}{\underline{Ссылка на проект в Github}}}
-        \item {Командная курсовая работа}
+      \vspace{-5mm}
+      \begin{cvitems}
+        \item {Командная курсовая работа по разработке etl системы обработки финансовых данных в реальном времени для аналитики.
+         Занимался написанием микросервисов для скрапинга данных с api криптобирж (продьюсеры) и их обработки (консьюмеры).}
         \item {Написание микросервисов с использованием Spring Boot}
         \item {Связывание микросервисов при помощи Kafka}
+        \item {\textbf{Стек}: Java 17, Spring Boot 2.7, PostgreSQL, Spring Data JPA / Hibernate, REST, Kafka, Docker, Docker Compose}
       \end{cvitems}
     }
 
